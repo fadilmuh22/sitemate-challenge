@@ -13,21 +13,6 @@ async function clickMeButton() {
   });
 }
 
-async function clickThisButton() {
-  let notificationMessage = "You just clicked ";
-  let notificationFromModal = document.getElementById(
-    "notification-from-modal"
-  );
-  showModalDialog("Are you sure you want continue or not?").then((confirm) => {
-    if (confirm) {
-      notificationFromModal.innerText = `${notificationMessage} "Yes"`;
-    } else {
-      notificationFromModal.innerText = `${notificationMessage} "Cancel"`;
-    }
-    notificationFromModal.classList.add("showing");
-  });
-}
-
 function showModalDialog(message) {
   return new Promise((resolve) => {
     let confirm = false;
